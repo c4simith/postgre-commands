@@ -1,0 +1,35 @@
+Commands for connecting and creating tables in postgreSql 
+---------------------------------------------------------
+
+Login and switching to console
+-----------------------
+sudo -iu postgres
+psql
+-----------------------
+
+Sample database creation
+-----------------------
+CREATE DATABASE bookshelf;
+-----------------------
+
+Conencting to database
+----------------------- 
+\connect bookshelf;
+-----------------------
+
+Sample table creation
+-----------------------
+CREATE TABLE books (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR (50),
+    author VARCHAR (50),
+    genre VARCHAR (20)
+);
+-----------------------
+
+Sample insert statements
+-----------------------
+INSERT INTO books (name,author, genre) VALUES ('The Fault In Our Stars', 'John Green', 'Fiction');
+INSERT INTO books (name,author, genre) VALUES ('Never Let Me GO', 'Kazuo Ishiguro', 'Fiction');
+INSERT INTO books (name,author, genre) VALUES ('Into The Wild', 'Jon Krakauer', 'Fiction');
+-----------------------
